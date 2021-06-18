@@ -1,0 +1,38 @@
+Options -Indexes
+
+RewriteEngine on
+ErrorDocument 404 /404.php
+RewriteRule ^about?$ about.php
+RewriteRule ^privacy-policy?$ privacy.php
+RewriteRule ^refund-policy?$ refund.php
+RewriteRule ^shipping-policy?$ shipping.php
+RewriteRule ^terms-of-use?$ terms.php
+RewriteRule ^shop?$ shop.php
+RewriteRule ^categories?$ categories.php
+RewriteRule ^product-category/([^/]*)?$ categories.php?category=$1
+RewriteRule ^subcategory/([^/]*)?$ categories.php?subcategory=$1
+RewriteRule ^contact?$ contact-us.php
+RewriteRule ^wishlist?$ wishlist.php
+RewriteRule ^checkout?$ checkout.php
+RewriteRule ^cart?$ cart.php
+RewriteRule ^place?$ thankyou.php
+RewriteRule ^login?$ MKTREsturent/login.php
+RewriteRule ^register?$ signup.php
+RewriteRule ^profile?$ profile.php
+RewriteRule ^search?$ search.php
+#RewriteRule ^/([0-9]+)?$ project.php?=$1
+#RewriteRule ^product/([^/]*)?$ product-detail.php?product=$1
+RewriteRule ^order-detail?$ order-detail.php
+RewriteRule ^shop/([^/]*)?$ shop.php?sort=$1
+
+RewriteRule ^product/([^/]*)?$ shop.php?slug=$1
+
+RewriteRule ^blog/([^/]*)?$ blog-detail.php?slug=$1
+
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php73” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php73 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
